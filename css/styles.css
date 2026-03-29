@@ -457,7 +457,7 @@ h3 { font-size: clamp(1.3rem, 2vw,   1.75rem); }
 
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 .service-card {
@@ -800,6 +800,7 @@ h3 { font-size: clamp(1.3rem, 2vw,   1.75rem); }
 
   .footer__inner     { flex-direction: column; }
   .cta-band__buttons { flex-direction: column; align-items: center; }
+  .services__grid    { grid-template-columns: repeat(2, 1fr); }
   .contact__layout   { grid-template-columns: 1fr; gap: 2.5rem; }
   .contact__card     { padding: 2rem 1.5rem; }
   .contact-form__row { grid-template-columns: 1fr; gap: 0; }
