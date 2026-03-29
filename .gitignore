@@ -1,0 +1,13 @@
+# Zmienne środowiskowe – nigdy nie commituj!
+.env
+
+# Claude Code (lokalne ustawienia)
+.claude/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# System
+.DS_Store
+Thumbs.db

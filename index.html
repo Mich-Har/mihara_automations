@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mihara Automation – Automatyzacja Procesów Biznesowych</title>
+  <meta name="description" content="Projektujemy inteligentne systemy automatyzacji z n8n, AI i RPA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       PAGE WRAPPER
+       Wszystkie treści zamknięte w kontenerze (szerokość navbar + 100px).
+       Tło body = grafitowe, wrapper = białe/kremowe.
+  ====================================================================== -->
+  <div class="page-wrapper">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <div class="container">
+        <a href="#" class="navbar__logo">
+          <img src="mihara_logo_transparent.png" alt="Mihara Automation" />
+        </a>
+        <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="navbar__links">
+          <li><a href="#services">Usługi</a></li>
+          <li><a href="#features">Jak działamy</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+          <li><a href="#contact" class="btn btn--primary btn--sm">Zacznij teraz</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero__content">
+          <span class="eyebrow reveal">n8n · AI · RPA · Automatyzacja biznesowa</span>
+          <h1 class="reveal reveal--delay-1">
+            Automatyzuj procesy.<br /><em>Przyspiesz wzrost.</em>
+          </h1>
+          <p class="reveal reveal--delay-2">
+            Mihara projektuje inteligentne systemy automatyzacji oparte na n8n, AI i RPA,
+            które eliminują powtarzalną pracę i pozwalają Twojemu zespołowi skupić się
+            na tym, co naprawdę ważne.
+          </p>
+          <div class="hero__cta reveal reveal--delay-3">
+            <a href="#contact" class="btn btn--primary btn--lg">
+              ▶&nbsp; Bezpłatna konsultacja
+            </a>
+          </div>
+        </div>
+        <!-- Prawa kolumna – ilustracja (zostanie dodana później) -->
+        <div class="hero__illustration" aria-hidden="true"></div>
+        <img src="Hero2.png" alt="Hero picture" class="img">
+      </div>
+    </section>
+
+    <!-- Wave: hero (cream) → navy -->
+    <div class="wave-transition" aria-hidden="true">
+      <svg viewBox="0 0 1440 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sky-blue layer: nieco wyżej niż navy, widoczna jako delikatna obwódka -->
+        <path
+          d="M0,280 C180,240 320,218 480,218 C650,218 820,233 980,223 C1180,198 1320,95 1440,-925 L1440,400 L0,400 Z"
+          fill="#CBE7F2"
+        />
+        <!-- Navy layer: główny kształt, na wierzchu -->
+        <path
+          d="M0,300 C180,260 320,240 480,240 C650,240 820,255 980,245 C1180,220 1320,120 1440,-800 L1440,400 L0,400 Z"
+          fill="#3D496E"
+        />
+      </svg>
+    </div>
+
+    <!-- ===== PROBLEM (NAVY) ===== -->
+    <!--
+      Sekcja przeciągnięta w dół – duży padding-bottom.
+      Biały card-peek na dole jest wystarczająco wysoki,
+      by pokazać nagłówek "Przedstawiamy Inteligentną Automatyzację"
+      z sekcji features, która zaczyna się tuż pod spodem.
+    -->
+    <section class="problem" id="problem">
+      <div class="container">
+        <span class="eyebrow reveal">Problem</span>
+        <div class="problem__body">
+          <h2 class="reveal reveal--delay-1">
+            Twój zespół tonie<br /><em>w powtarzalnych zadaniach</em>
+          </h2>
+          <p class="reveal reveal--delay-2">
+            Badania pokazują, że pracownicy wiedzy spędzają nawet
+            <strong>40% czasu pracy</strong> na zadaniach, które można
+            zautomatyzować – ręczne wprowadzanie danych, generowanie raportów,
+            obsługa e-maili, synchronizacja systemów.
+          </p>
+          <p class="reveal reveal--delay-3">
+            Kiedy rutyna prowadzi do frustracji i wypalenia zawodowego,
+            nieodwracalnie cierpi kreatywność, zaangażowanie i tempo wzrostu firmy.
+          </p>
+          <p class="reveal reveal--delay-4">
+            Trudne wyzwania biznesowe stają się prostsze, gdy masz czas i narzędzia,
+            by skupić się na rozwiązaniach zamiast na obsłudze procesów.
+          </p>
+        </div>
+      </div>
+
+      <!--
+        Card-peek: biały zaokrąglony prostokąt wyłaniający się z dołu navy.
+        Jest wystarczająco wysoki by pokazać intro features (Przedstawiamy...).
+        Nie ma własnej treści – treść należy do sekcji .features poniżej,
+        która nakłada się na peek przez ujemny margin-top.
+      -->
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <!--
+      Sekcja zaczyna się z ujemnym margin-top, więc nakłada się na card-peek.
+      Efekt: intro ("Przedstawiamy...") jest widoczne wewnątrz białego card-peek.
+
+      Trzy-kolumnowy układ każdego feature-row:
+        [lewa: tekst LUB wizualizacja]
+        [środek: numer + pionowa linia]
+        [prawa: wizualizacja LUB tekst]
+      Naprzemiennie między nieparzystymi i parzystymi rzędami.
+    -->
+    <section class="features" id="features">
+      <div class="container">
+
+        <!-- Intro – widoczne wewnątrz card-peek -->
+        <div class="features__intro reveal">
+          <span class="eyebrow">Jak pomagamy</span>
+          <h2>Przedstawiamy<br /><em>Inteligentną Automatyzację</em></h2>
+        </div>
+
+        <!-- Lista features z pionową linią pośrodku -->
+        <div class="features__list">
+
+          <!-- Feature 1: tekst L | numer C | wizualizacja P -->
+          <div class="feature-row reveal">
+            <div class="feature-row__cell feature-row__cell--text">
+              <span class="eyebrow">Orkiestracja procesów</span>
+              <h3>Automatyzacja przepływów pracy z n8n</h3>
+              <p>Budujemy zaawansowane workflow w n8n, które łączą Twoje narzędzia i automatyzują wieloetapowe procesy – bez pisania kodu. Od wyzwalacza po wynik, każdy krok jest wizualny i łatwy do modyfikacji.</p>
+              <a href="#contact" class="feature-row__link">Dowiedz się więcej →</a>
+            </div>
+            <div class="feature-row__mid">
+              <div class="feature-row__num">1</div>
+            </div>
+            <div class="feature-row__cell feature-row__cell--visual" aria-hidden="true">
+              <div class="feature-row__visual-icon"></div>
+              <span>Wizualizacja workflow n8n</span>
+            </div>
+          </div>
+
+          <!-- Feature 2: wizualizacja L | numer C | tekst P -->
+          <div class="feature-row feature-row--reverse reveal">
+            <div class="feature-row__cell feature-row__cell--visual" aria-hidden="true">
+              <div class="feature-row__visual-icon"></div>
+              <span>Model AI w akcji</span>
+            </div>
+            <div class="feature-row__mid">
+              <div class="feature-row__num">2</div>
+            </div>
+            <div class="feature-row__cell feature-row__cell--text">
+              <span class="eyebrow">Sztuczna inteligencja</span>
+              <h3>Decyzje wspierane przez AI</h3>
+              <p>Od klasyfikacji dokumentów po analizę predyktywną – integrujemy modele AI bezpośrednio w Twoje procesy. ChatGPT, Claude, własne modele – dobieramy narzędzie do problemu, nie odwrotnie.</p>
+              <a href="#contact" class="feature-row__link">Dowiedz się więcej →</a>
+            </div>
+          </div>
+
+          <!-- Feature 3: tekst L | numer C | wizualizacja P -->
+          <div class="feature-row reveal">
+            <div class="feature-row__cell feature-row__cell--text">
+              <span class="eyebrow">RPA</span>
+              <h3>Roboty przejmują powtarzalną pracę</h3>
+              <p>Nasze boty RPA obsługują zadania oparte na interfejsie użytkownika – scraping danych, wypełnianie formularzy, migracje między systemami, obsługa aplikacji legacy.</p>
+              <a href="#contact" class="feature-row__link">Dowiedz się więcej →</a>
+            </div>
+            <div class="feature-row__mid">
+              <div class="feature-row__num">3</div>
+            </div>
+            <div class="feature-row__cell feature-row__cell--visual" aria-hidden="true">
+              <div class="feature-row__visual-icon"></div>
+              <span>Bot RPA w pracy</span>
+            </div>
+          </div>
+
+          <!-- Feature 4: wizualizacja L | numer C | tekst P -->
+          <div class="feature-row feature-row--reverse reveal">
+            <div class="feature-row__cell feature-row__cell--visual" aria-hidden="true">
+              <div class="feature-row__visual-icon"></div>
+              <span>Diagram integracji</span>
+            </div>
+            <div class="feature-row__mid">
+              <div class="feature-row__num">4</div>
+            </div>
+            <div class="feature-row__cell feature-row__cell--text">
+              <span class="eyebrow">Integracje systemowe</span>
+              <h3>Wszystkie Twoje systemy w jednym miejscu</h3>
+              <p>Łączymy CRM, ERP, e-mail, bazy danych i aplikacje SaaS w jeden zautomatyzowany ekosystem. Koniec z ręcznym kopiowaniem danych między systemami.</p>
+              <a href="#contact" class="feature-row__link">Dowiedz się więcej →</a>
+            </div>
+          </div>
+
+          <!-- Feature 5: tekst L | numer C | wizualizacja P -->
+          <div class="feature-row reveal">
+            <div class="feature-row__cell feature-row__cell--text">
+              <span class="eyebrow">Monitoring i optymalizacja</span>
+              <h3>Automatyzacje, które się uczą i rosną</h3>
+              <p>Każdy system, który budujemy, jest wyposażony w monitoring w czasie rzeczywistym, obsługę błędów i alerty. Twoja automatyzacja staje się coraz lepsza z czasem.</p>
+              <a href="#contact" class="feature-row__link">Dowiedz się więcej →</a>
+            </div>
+            <div class="feature-row__mid">
+              <div class="feature-row__num">5</div>
+            </div>
+            <div class="feature-row__cell feature-row__cell--visual" aria-hidden="true">
+              <div class="feature-row__visual-icon"></div>
+              <span>Dashboard analityczny</span>
+            </div>
+          </div>
+
+        </div><!-- /features__list -->
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section section--dark" id="services">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">Nasze usługi</span>
+          <h2>Wybieramy najtrudniejsze<br />wyzwania automatyzacji</h2>
+          <p>Specjalizujemy się w kompleksowych projektach, które przynoszą mierzalny zwrot z inwestycji.</p>
+        </div>
+        <div class="services__grid">
+          <div class="service-card reveal reveal--delay-1">
+            <div class="service-card__icon">⚙️</div>
+            <h3>Consulting procesowy</h3>
+            <p>Mapujemy Twoje procesy, identyfikujemy wąskie gardła i projektujemy roadmapę automatyzacji.</p>
+          </div>
+          <div class="service-card reveal reveal--delay-2">
+            <div class="service-card__icon">🔄</div>
+            <h3>Wdrożenia n8n</h3>
+            <p>Projektowanie workflow, integracje API, wdrożenie na Twojej infrastrukturze lub w chmurze.</p>
+          </div>
+          <div class="service-card reveal reveal--delay-3">
+            <div class="service-card__icon">🤖</div>
+            <h3>Integracja AI</h3>
+            <p>ChatGPT, Claude, Mistral, własne modele – integrujemy AI tam, gdzie tworzy realną wartość.</p>
+          </div>
+          <div class="service-card reveal reveal--delay-1">
+            <div class="service-card__icon">🖥️</div>
+            <h3>Implementacja RPA</h3>
+            <p>Automatyzacja oparta na interfejsie – scraping, ekstrakcja danych, obsługa systemów legacy.</p>
+          </div>
+          <div class="service-card reveal reveal--delay-2">
+            <div class="service-card__icon">📚</div>
+            <h3>Szkolenia i przekazanie</h3>
+            <p>Szkolimy Twój zespół, by samodzielnie zarządzał i rozwijał automatyzacje.</p>
+          </div>
+          <div class="service-card reveal reveal--delay-3">
+            <div class="service-card__icon">📡</div>
+            <h3>Support i optymalizacja</h3>
+            <p>Pakiety monitoringu, utrzymania i ciągłej optymalizacji. Zawsze aktualne i sprawne.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT FORM ===== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact__layout">
+
+          <!-- Lewa kolumna: CTA -->
+          <div class="contact__aside reveal">
+            <span class="eyebrow">Gotowy na zmiany?</span>
+            <h2>Umów bezpłatny<br /><em>przegląd procesu</em></h2>
+            <p>Wypełnij formularz – oddzwonimy w ciągu 24 godzin i przeprowadzimy bezpłatny przegląd Twoich procesów. Zero zobowiązań.</p>
+            <ul class="contact__perks">
+              <li>Bezpłatna analiza procesów</li>
+              <li>Konkretna rekomendacja co zautomatyzować</li>
+              <li>Wstępna wycena bez zobowiązań</li>
+            </ul>
+          </div>
+
+          <!-- Prawa kolumna: formularz -->
+          <div class="contact__card reveal reveal--delay-1">
+          <form class="contact-form" id="contactForm" novalidate>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="cf-firstName">Imię <span class="contact-form__req" aria-hidden="true">*</span></label>
+                <input type="text" id="cf-firstName" name="firstName" placeholder="Jan" autocomplete="given-name" required />
+              </div>
+              <div class="contact-form__field">
+                <label for="cf-lastName">Nazwisko <span class="contact-form__req" aria-hidden="true">*</span></label>
+                <input type="text" id="cf-lastName" name="lastName" placeholder="Kowalski" autocomplete="family-name" required />
+              </div>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="cf-email">E-mail służbowy <span class="contact-form__req" aria-hidden="true">*</span></label>
+                <input type="email" id="cf-email" name="email" placeholder="jan@twojafirma.pl" autocomplete="email" required />
+              </div>
+              <div class="contact-form__field">
+                <label for="cf-phone">Telefon</label>
+                <input type="tel" id="cf-phone" name="phone" placeholder="+48 500 000 000" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="contact-form__field">
+              <label for="cf-company">Nazwa firmy</label>
+              <input type="text" id="cf-company" name="company" placeholder="Twoja Firma sp. z o.o." autocomplete="organization" />
+            </div>
+
+            <div class="contact-form__field">
+              <label for="cf-needs">Czego potrzebujesz? <span class="contact-form__req" aria-hidden="true">*</span></label>
+              <textarea
+                id="cf-needs"
+                name="needs"
+                rows="4"
+                placeholder="Np.:&#10;• Chcę umówić darmowy audyt procesów&#10;• Chcę porozmawiać o możliwościach automatyzacji&#10;• Chcę wycenić konkretne wdrożenie"
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-form__field">
+              <label for="cf-systems">Jakie systemy chcesz zintegrować lub zautomatyzować?</label>
+              <textarea
+                id="cf-systems"
+                name="systems"
+                rows="3"
+                placeholder="Np. CRM (Salesforce, HubSpot), ERP (SAP, Comarch), e-mail (Gmail, Outlook), Allegro, własna baza danych, arkusze Google…"
+              ></textarea>
+            </div>
+
+            <!-- reCAPTCHA – tutaj zostanie dodany widget Google -->
+            <div class="contact-form__captcha" id="recaptchaContainer">
+              <div class="contact-form__captcha-placeholder">
+                <div class="contact-form__captcha-left">
+                  <div class="contact-form__captcha-checkbox" aria-hidden="true"></div>
+                  <span>Nie jestem robotem</span>
+                </div>
+                <div class="contact-form__captcha-logo" aria-hidden="true">
+                  <svg width="38" height="38" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="29" stroke="#4A90D9" stroke-width="4"/><path d="M20 32 Q32 14 44 32 Q32 50 20 32Z" fill="#4A90D9" opacity="0.15"/><circle cx="32" cy="32" r="9" fill="#4A90D9" opacity="0.7"/></svg>
+                  <span>reCAPTCHA<br/><small>Prywatność · Warunki</small></span>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg contact-form__submit" id="cfSubmit">
+              ▶&nbsp; Umów bezpłatny przegląd
+            </button>
+
+            <p class="contact-form__note">* Pola wymagane. Twoje dane są bezpieczne i nie są udostępniane osobom trzecim.</p>
+
+            <div class="contact-form__feedback" id="cfFeedback" role="alert" aria-live="polite"></div>
+
+          </form>
+          </div><!-- /contact__card -->
+
+        </div><!-- /contact__layout -->
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="about">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <a href="#home">
+              <img src="mihara_logo_transparent.png" alt="Mihara Automation" />
+            </a>
+            <p>Inteligentna automatyzacja biznesowa z n8n, AI i RPA. Budujemy systemy, które pracują za Ciebie.</p>
+          </div>
+          <div class="footer__links">
+            <h4>Usługi</h4>
+            <ul>
+              <li><a href="#features">Automatyzacja n8n</a></li>
+              <li><a href="#features">Integracja AI</a></li>
+              <li><a href="#features">RPA</a></li>
+              <li><a href="#services">Consulting</a></li>
+            </ul>
+          </div>
+          <div class="footer__links">
+            <h4>Firma</h4>
+            <ul>
+              <li><a href="#about">O nas</a></li>
+              <li><a href="#services">Usługi</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+              <li><a href="#contact">Kariera</a></li>
+            </ul>
+          </div>
+          <div class="footer__links">
+            <h4>Kontakt</h4>
+            <ul>
+              <li><a href="mailto:kontakt@mihara.pl">kontakt@mihara.pl</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Twitter / X</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2025 Mihara Automation. Wszelkie prawa zastrzeżone.</p>
+          <div class="footer__social">
+            <a href="#">Polityka prywatności</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
