@@ -482,7 +482,7 @@ h3 { font-size: clamp(1.3rem, 2vw,   1.75rem); }
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 1rem; font-size: 1.3rem;
 }
-.service-card h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.service-card h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .service-card p  { color: rgba(255,255,255,0.5); font-size: 0.9rem; line-height: 1.6; }
 
 /* ========== CTA BAND ========== */
